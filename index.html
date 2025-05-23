@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="main-header">
+              <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"
+                    ><img
+                      src="assets/images/logo-list.png"
+                      alt="list logo"
+                      class="img-fulid"
+                  /></a>
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                  >
+                    <ul class="navbar-nav menu_list ">
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">More Option</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                      </li>
+                    </ul>
+                      <button class="btn login_btn" type="submit">
+                       Log In
+                      </button>
+                      <button onclick="openSignupForm()" class="btn sign_btn" type="submit">
+                        Sign Up
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+     <div id="signupModal" class="modal">
+  <div class="modal-box">
+    <span class="close" onclick="closeSignupForm()">&times;</span>
+    <h2>Get Started Today!</h2>
+    <p>Fill in your details and take control of your tasks.</p>
+
+    <form id="signupForm">
+      <div class="row">
+        <div class="form-group half">
+          <label>First Name</label>
+          <input type="text" placeholder="Enter your first name" required>
+        </div>
+        <div class="form-group half">
+          <label>Last Name</label>
+          <input type="text" placeholder="Enter your last name" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Language</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="English"> English</label>
+          <label><input type="checkbox" value="Hindi"> Hindi</label>
+          <label><input type="checkbox" value="Marathi"> Marathi</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email address" required>
+      </div>
+
+      <div class="form-group terms">
+        <label>
+          <input type="checkbox" required>
+          I agree to the <a href="#">terms and conditions</a>
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Done</button>
+    </form>
+    <!-- Move thank-you message outside form -->
+<p id="thankYouMsg" class="thank-you">Thank you for your submission!</p>
+
+  </div>
+</div>
+
+    </header>
+    <main>
+        <section class="todo_app_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="heading">
+                            Simplify Your Life with Our <br> Todo App
+                        </div>
+                        <div class="top-para">
+                            Stay organized and boost your productivity with our intuitive todo website.<br> Experience a modern approach to task management that fits your lifestyle.
+                        </div>
+                        <div class="get_started_btn">
+                          <a class="started_color" href="">Get started</a>
+                          <a class="learn_more" href="">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row main_box">
+                  <div class="col-lg-1"></div>
+                  <div class="col-lg-7 ">
+                    <div class="organize-box">
+                      <div class="organize-heading">Organize. <span><br> Achieve. <br> Relax.</span></div>
+                      <div class="para-line">Turn clutter into clarity, chaos into control, and dreams into done.bold visions into market success</div>
+                      <div class="get_btn">
+                        <a class="white_btn" href="">Get Started Today</a>
+                        <a class="color_btn" href="">Discover Features</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="member">
+                      <div class="owl-carousel organize-slider">
+                        <div class="item">
+                            <div class="member-img">
+                              <div class="tools-heading">Your Tasks. <br> <span>Our Tools.</span></div>
+                              <img
+                                src="assets/images/man-image.webp"
+                                alt="person"
+                                class="img-fulid"
+                              />
+                            </div>
+                            <div class="person_text">
+                              <img src="assets/images/Logo.png" alt="icon" class="img-fulid">
+                              <div class="person_name">Freddie Halvorson</div>
+                              <div class="person_desgnition">Chief Productivity Enthusiast</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="member-img">
+                              <div class="tools-heading">Your Tasks. <br> <span>Our Tools.</span></div>
+                              <img
+                                src="assets/images/man-image.webp"
+                                alt="person"
+                                class="img-fulid"
+                              />
+                            </div>
+                            <div class="person_text">
+                              <img src="assets/images/Logo.png" alt="icon" class="img-fulid">
+                              <div class="person_name">Freddie Halvorson</div>
+                              <div class="person_desgnition">Chief Productivity Enthusiast</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="member-img">
+                              <div class="tools-heading">Your Tasks. <br> <span>Our Tools.</span></div>
+                              <img
+                                src="assets/images/man-image.webp"
+                                alt="person"
+                                class="img-fulid"
+                              />
+                            </div>
+                            <div class="person_text">
+                              <img src="assets/images/Logo.png" alt="icon" class="img-fulid">
+                              <div class="person_name">Freddie Halvorson</div>
+                              <div class="person_desgnition">Chief Productivity Enthusiast</div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-1"></div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-1"></div>
+                  <div class="col-lg-10">
+                    <div class="company">
+                    <div class="owl-carousel company-slider">
+                      <div class="item">
+                        <div class="company-logo">
+                          <img src="assets/images/google.png" alt="google" class="img-fulid">
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="company-logo">
+                          <img src="assets/images/facebook.png" alt="facebook" class="img-fulid">
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="company-logo">
+                          <img src="assets/images/youtube.png" alt="youtube" class="img-fulid">
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="company-logo">
+                          <img src="assets/images/pinterest.png" alt="pinterest" class="img-fulid">
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="company-logo">
+                          <img src="assets/images/twitch.png" alt="twitch" class="img-fulid">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </section>
+        <section class="productivity_section">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="productive_heading">Transform Your Productivity with Our <br> Innovative To-Do List Features</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="main_card">
+                <div class="card-box">
+                  <div class="serial">01</div>
+                  <img src="assets/images/gg_ui-kit.png" alt="logo" class="img-fulid">
+                  <div class="subheading_card">User-Friendly Interface</div>
+                  <img src="assets/images/red_line.png" alt="line" class="img-fulid red_line">
+                  <div class="card_para">Our platform offers seamless task management to boost your efficiency.</div>
+                </div>
+                <div class="card-box">
+                  <div class="serial">02</div>
+                  <img src="assets/images/Black.png" alt="logo" class="img-fulid">
+                  <div class="subheading_card">Collaborate & Share Effortlessly</div>
+                  <img src="assets/images/red_line.png" alt="line" class="img-fulid red_line">
+                  <div class="card_para">Invite team members to work together and achieve your goals faster.</div>
+                </div>
+                <div class="card-box">
+                  <div class="serial">03</div>
+                  <img src="assets/images/streamline_collaborations-idea.png" alt="logo" class="img-fulid">
+                  <div class="subheading_card">Effortless Collaboration</div>
+                  <img src="assets/images/red_line.png" alt="line" class="img-fulid red_line">
+                  <div class="card_para">Invite team members to work together and achieve your goals faster.</div>
+                </div>
+                <div class="card-box">
+                  <div class="serial">04</div>
+                  <img src="assets/images/Black-1.png" alt="logo" class="img-fulid">
+                  <div class="subheading_card"> Seamless Access</div>
+                  <img src="assets/images/red_line.png" alt="line" class="img-fulid red_line">
+                  <div class="card_para">Stay connected and manage your tasks on the go with ease.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="testimonals_section">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="testimonials_heading">
+                  Customer Testimonials
+                </div>
+                <div class="testimonals_para">This tool has transformed my productivity and organization!</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-2"></div>
+              <div class="col-lg-10">
+                <div class="testimonials-main-box">
+                    <div class="testimonials_sub_box"></div>
+                    <div class="autor-box">
+                      <div class="owl-carousel testimonials-slider">
+                        <div class="items monials-part">
+                          <div class="testimonial-text">
+                            <p>Using this website has made my tasks so much easier! I can't imagine my day without it."</p>
+                            <div class="author">
+                              <div class="author-icon"><span></span></div>
+                              <div class="author-details">
+                                <strong>Sherri Cronin</strong><br>
+                                Project Manager, TechCorp
+                              </div>
+                            </div>
+                          </div>
+                          <div class="testimonial-image">
+                            <img src="assets/images/girl.jpg" alt="testimonial" class="img-fulid">
+                          </div>
+                        </div>
+                        <div class="items monials-part">
+                          <div class="testimonial-text">
+                            <p>Using this website has made my tasks so much easier! I can't imagine my day without it."</p>
+                            <div class="author">
+                              <div class="author-icon"><span></span></div>
+                              <div class="author-details">
+                                <strong>Sherri Cronin</strong><br>
+                                Project Manager, TechCorp
+                              </div>
+                            </div>
+                          </div>
+                          <div class="testimonial-image">
+                            <img src="assets/images/girl.jpg" alt="testimonial" class="img-fulid">
+                          </div>
+                        </div>
+                        <div class="items monials-part">
+                          <div class="testimonial-text">
+                            <p>Using this website has made my tasks so much easier! I can't imagine my day without it."</p>
+                            <div class="author">
+                              <div class="author-icon"><span></span></div>
+                              <div class="author-details">
+                                <strong>Sherri Cronin</strong><br>
+                                Project Manager, TechCorp
+                              </div>
+                            </div>
+                          </div>
+                          <div class="testimonial-image">
+                            <img src="assets/images/girl.jpg" alt="testimonial" class="img-fulid">
+                          </div>
+                        </div>
+                        <div class="items monials-part">
+                          <div class="testimonial-text">
+                            <p>Using this website has made my tasks so much easier! I can't imagine my day without it."</p>
+                            <div class="author">
+                              <div class="author-icon"><span></span></div>
+                              <div class="author-details">
+                                <strong>Sherri Cronin</strong><br>
+                                Project Manager, TechCorp
+                              </div>
+                            </div>
+                          </div>
+                          <div class="testimonial-image">
+                            <img src="assets/images/girl.jpg" alt="testimonial" class="img-fulid">
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+                
+              </div>
+              <div class="col-lg-2"></div>
+            </div>
+          </div>
+        </section>
+        <section class="start_org_section">
+          <div class="container">
+            <div class="row d-flex align-items-center">
+              <div class="col-lg-6">
+                <div class="organizing-img text-center">
+                  <img src="assets/images/Photo-rectangle.png" alt="Photo-rectangle" class="img-fulid">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="orgaizing-text">
+                  <div class="organizing-heading">
+                    Start Organizing Your <br> Life Today
+                  </div>
+                  <div class="prganizing-para">
+                    Join us now and transform your productivity with our intuitive to-do <br> list platform!
+                  </div>
+                  <div class="orgnizing-btn">
+                    <a class="first-color" href="">Sign Up</a>
+                    <a class="second-white" href="">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer>
+  <div class="footer-container">
+   <div class="container">
+    <div class="row">
+    <div class="col-lg-4">
+      <div class="footer-section">
+      <div class="footer-logo">
+        <img src="assets/images/logo-list.png" alt="login" class="img-fulid">
+      </div>
+      <p>Subscribe to our newsletter for the latest features and updates delivered to you.</p>
+      <div class="newsletter">
+        <input type="email" placeholder="Your email here" />
+        <button>Join</button>
+      </div>
+      <small>By subscribing, you consent to our Privacy Policy and agree to receive updates.</small>
+    </div>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-7">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="footer-section footer-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Home Page</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Blog Posts</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-section footer-links">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">User Guide</a></li>
+        <li><a href="#">Community Forum</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-section social-icons">
+      <h4>Connect With Us</h4>
+      <a href=""><i class="fa-brands fa-facebook" style="color: #ff3e54;"></i>Facebook</a>
+      <a href="#"><i class="fab fa-instagram" style="color: #ff3e54;"></i> Instagram</a>
+      <a href="#"><i class="fab fa-x-twitter" style="color: #ff3e54;"></i> X</a>
+      <a href="#"><i class="fab fa-linkedin-in" style="color: #ff3e54;"></i> LinkedIn</a>
+      <a href="#"><i class="fab fa-youtube" style="color: #ff3e54;"></i> YouTube</a>
+    </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copy-right">© 2024 Osumare. All rights reserved.</div>
+    <div class="terms links">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Cookie Settings</a>
+    </div>
+  </div>
+    </div>
+    </div>
+   </div>
+</footer>
+
+    <!-- bootstrap -->
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+  ></script>
+       <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function () {
+      $('.organize-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        navText: [
+          '<img src="assets/images/Left.png" alt="Prev" class="custom-nav-left">',
+          '<img src="assets/images/Right.png" alt="Next" class="custom-nav-right">'
+        ],
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
+      });
+      $('.company-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        dots:true,
+        nav: false,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 2
+          },
+          600: {
+            items: 4
+          },
+          1000: {
+            items: 5
+          }
+        }
+      });
+      $(".testimonials-slider").owlCarousel({
+      items: 1,
+      loop: true,
+      nav: true,
+      autoplay:true,
+      navText: [
+          '<img src="assets/images/arrowleft.png" alt="Prev" class="testi-owl-prev">',
+          '<img src="assets/images/arrowleft.png" alt="Next" class="testi-owl-next">'
+        ],
+      dots: false,
+       responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
+    });
+    });
+  </script>
+ <script>
+function openSignupForm() {
+  document.getElementById("signupModal").style.display = "block";
+}
+
+function closeSignupForm() {
+  document.getElementById("signupModal").style.display = "none";
+  document.getElementById("thankYouMsg").style.display = "none";
+  document.getElementById("signupForm").style.display = "block";
+  document.getElementById("signupForm").reset();
+}
+
+document.getElementById("signupForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("signupForm").style.display = "none";
+  document.getElementById("thankYouMsg").style.display = "block";
+});
+
+window.onclick = function(event) {
+  const modal = document.getElementById("signupModal");
+  if (event.target === modal) {
+    closeSignupForm();
+  }
+};
+</script>
+
+
+  </body>
+</html>
