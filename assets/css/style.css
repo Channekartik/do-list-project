@@ -33,12 +33,6 @@
   cursor: pointer;
 }
 
-/* Form Layout */
-/* .row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-} */
 .half {
   flex: 1 1 45%;
 }
